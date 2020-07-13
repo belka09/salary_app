@@ -19,6 +19,9 @@ import { WorkerAddComponent } from './components/worker-add/worker-add.component
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WorkerInnerComponent } from './components/worker-inner/worker-inner.component';
+import { ProjectsListComponent } from './components/projects-list/projects-list.component';
+import { ProjectComponent } from './components/project/project.component';
+import { ProjectsLatestComponent } from './components/projects-latest/projects-latest.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { WorkerInnerComponent } from './components/worker-inner/worker-inner.com
     CoreComponent,
     TeamComponent,
     WorkerAddComponent,
-    WorkerInnerComponent
+    WorkerInnerComponent,
+    ProjectsListComponent,
+    ProjectComponent,
+    ProjectsLatestComponent
   ],
   imports: [
     BrowserModule,
