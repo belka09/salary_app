@@ -1,0 +1,15 @@
+@import 'main';
+
+.total {
+    display: flex;
+    background: $gray;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+
+    &__count {
+        font-size: 30px;
+        color: $yellow;
+        margin: 0 2rem;
+    }
+}

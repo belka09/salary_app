@@ -1,0 +1,8 @@
+<div class="core">
+    <span class="core__title">Core team</span>
+    <div class="core__team">
+        <div *ngFor="let item of teamService.getCoreTeamArray()" class="core__team-worker">
+            <app-worker [worker]="item"></app-worker>
+        </div>
+    </div>
+</div>
