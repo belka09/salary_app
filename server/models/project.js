@@ -1,9 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let Worker = require('./models/Worker');
-
-
 let Project = new Schema({
   name: {
     type: String
@@ -18,8 +15,12 @@ let Project = new Schema({
 //     type: String
 //   },
   workers: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Worker'
+    name: {
+      type: String
+    },
+    rate: {
+      type: String
+    }
   }]
 }, {
   collection: 'projects'

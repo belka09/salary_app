@@ -4,9 +4,9 @@ const projectRoute = express.Router();
 
 let Project = require('../models/Project');
 
-// Add worker
+// Add Project
 projectRoute.route('/add-project').post((req, res, next) => {
-  Worker.create(req.body, (error, data) => {
+  Project.create(req.body, (error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -16,8 +16,8 @@ projectRoute.route('/add-project').post((req, res, next) => {
 });
 
 // Get all
-projectRoute.route('/project').get((req, res) => {
-  Worker.find((error, data) => {
+projectRoute.route('/projects').get((req, res) => {
+  Project.find((error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -26,9 +26,9 @@ projectRoute.route('/project').get((req, res) => {
   })
 })
 
-// Get single worker
+// Get single Project
 projectRoute.route('/project/:id').get((req, res) => {
-  Worker.findById(req.params.id, (error, data) => {
+  Project.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -38,9 +38,9 @@ projectRoute.route('/project/:id').get((req, res) => {
 })
 
 
-// Update worker
+// Update Project
 projectRoute.route('/update-project/:id').put((req, res, next) => {
-  Worker.findByIdAndUpdate(req.params.id, {
+  Project.findByIdAndUpdate(req.params.id, {
     $set: req.body
   }, (error, data) => {
     if (error) {
@@ -53,9 +53,9 @@ projectRoute.route('/update-project/:id').put((req, res, next) => {
   })
 })
 
-// Delete worker
+// Delete Project
 projectRoute.route('/delete-project/:id').delete((req, res, next) => {
-  Worker.findByIdAndRemove(req.params.id, (error, data) => {
+  Project.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {

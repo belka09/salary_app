@@ -20,6 +20,7 @@ mongoose.connect(dataBaseConfig.db, {
 
 // Set up express js port
 const workerRoute = require('./routes/worker.route');
+const projectsRoute = require('./routes/project.route');
 
 const app = express();
 app.use(bodyParser.json());
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'dist/salaryApp')));
 
 // RESTful API root
 app.use('/api', workerRoute)
+app.use('/api', projectsRoute)
 
 // PORT
 const port = process.env.PORT || 8000;

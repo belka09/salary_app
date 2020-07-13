@@ -14,6 +14,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  // worker api
+
   public getWorkers() {
     return this.http.get(`${this.endpoint}/workers`);
   }
@@ -28,5 +30,10 @@ export class ApiService {
 
   public deleteWorker(id) {
     return this.http.delete(`${this.endpoint}/delete-worker/${id}`);
+  }
+
+  // projects api
+  public getProjects() {
+    return this.http.get(`${this.endpoint}/projects`);
   }
 }
