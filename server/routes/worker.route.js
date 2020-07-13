@@ -6,7 +6,7 @@ let Worker = require('../models/Worker');
 
 // Add worker
 workersRoute.route('/add-worker').post((req, res, next) => {
-  Student.create(req.body, (error, data) => {
+  Worker.create(req.body, (error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -17,7 +17,7 @@ workersRoute.route('/add-worker').post((req, res, next) => {
 
 // Get all
 workersRoute.route('/workers').get((req, res) => {
-  Student.find((error, data) => {
+  Worker.find((error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -28,7 +28,7 @@ workersRoute.route('/workers').get((req, res) => {
 
 // Get single worker
 workersRoute.route('/workers/:id').get((req, res) => {
-  Student.findById(req.params.id, (error, data) => {
+  Worker.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error)
     } else {
@@ -40,7 +40,7 @@ workersRoute.route('/workers/:id').get((req, res) => {
 
 // Update worker
 workersRoute.route('/update-worker/:id').put((req, res, next) => {
-  Student.findByIdAndUpdate(req.params.id, {
+  Worker.findByIdAndUpdate(req.params.id, {
     $set: req.body
   }, (error, data) => {
     if (error) {
@@ -55,7 +55,7 @@ workersRoute.route('/update-worker/:id').put((req, res, next) => {
 
 // Delete worker
 workersRoute.route('/delete-worker/:id').delete((req, res, next) => {
-  Student.findByIdAndRemove(req.params.id, (error, data) => {
+  Worker.findByIdAndRemove(req.params.id, (error, data) => {
     if (error) {
       return next(error);
     } else {

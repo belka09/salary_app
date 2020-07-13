@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -35,13 +36,17 @@ export class TeamService {
     }
   ]
 
-  constructor() { }
+  constructor(private apiService: ApiService) { }
 
   getCoreTeamArray() {
     return this.coreArray;
   }
 
   getTeamArray() {
-    return this.team;
+    return this.apiService.getWorkers();
+  }
+
+  addNewWorker(worker) {
+    return this.apiService.addWorker(worker);
   }
 }

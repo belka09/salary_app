@@ -1,0 +1,17 @@
+@import 'main';
+
+.add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    mat-card {
+        width: 50%;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+}

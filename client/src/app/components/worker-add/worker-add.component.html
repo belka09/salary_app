@@ -1,0 +1,41 @@
+<div class="add">
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Add new worker</mat-card-title>
+        </mat-card-header>
+        <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+        <mat-card-content>
+            <form class="example-form add__form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher"
+                           placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="nameFormControl.hasError('required')">
+                      Name is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Position</mat-label>
+                    <input matInput [formControl]="positionFormControl" [errorStateMatcher]="matcher"
+                           placeholder="Ex. Lol kek">
+                    <mat-error *ngIf="positionFormControl.hasError('required')">
+                    Position is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Rate</mat-label>
+                    <input matInput [formControl]="rateFormControl" [errorStateMatcher]="matcher"
+                           placeholder="Ex. 15">
+                    <mat-error *ngIf="rateFormControl.hasError('required')">
+                      Rate is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+              </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="submitWorkerForm()" mat-button>Submit</button>
+          <button (click)="resetForm()" mat-button>Reset</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

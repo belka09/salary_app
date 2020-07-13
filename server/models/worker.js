@@ -11,9 +11,9 @@ let Worker = new Schema({
   rate: {
     type: String
   },
-  photo: {
-    type: Array
-  }
+  // photo: {
+  //   type: Array
+  // }
 }, {
   collection: 'workers'
 })
