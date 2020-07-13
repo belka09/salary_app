@@ -21,4 +21,12 @@ export class ApiService {
   public addWorker(worker) {
     return this.http.post(`${this.endpoint}/add-worker`, worker);
   }
+
+  public getWorker(id) {
+    return this.http.get(`${this.endpoint}/workers/${id}`);
+  }
+
+  public deleteWorker(id) {
+    return this.http.delete(`${this.endpoint}/delete-worker/${id}`);
+  }
 }
