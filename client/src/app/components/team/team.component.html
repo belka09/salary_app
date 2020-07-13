@@ -1,7 +1,7 @@
 <div class="team">
     <span class="team__title">Team</span>
     <div class="team__team">
-        <div *ngFor="let item of teamService.getTeamArray()" class="team__team-worker">
+        <div *ngFor="let item of team" class="team__team-worker">
             <app-worker [worker]="item"></app-worker>
         </div>
         <div (click)="addNewWorker()" class="team__team-add">

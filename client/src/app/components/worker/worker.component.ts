@@ -14,4 +14,8 @@ export class WorkerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  goToWorker(worker) {
+    console.log(worker);
+  }
+
 }

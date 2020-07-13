@@ -76,3 +76,9 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
