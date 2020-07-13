@@ -1,0 +1,28 @@
+@import 'main';
+
+.core {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid $light-gray;
+
+    &__title {
+        font-size: 18px;
+        margin-bottom: 2rem;
+    }
+
+    &__team {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-worker {
+            margin-right: 1rem;
+            width: 300px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
