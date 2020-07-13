@@ -18,6 +18,7 @@ import { TeamComponent } from './components/team/team.component';
 import { WorkerAddComponent } from './components/worker-add/worker-add.component';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WorkerInnerComponent } from './components/worker-inner/worker-inner.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     TotalComponent,
     CoreComponent,
     TeamComponent,
-    WorkerAddComponent
+    WorkerAddComponent,
+    WorkerInnerComponent
   ],
   imports: [
     BrowserModule,

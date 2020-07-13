@@ -49,4 +49,12 @@ export class TeamService {
   addNewWorker(worker) {
     return this.apiService.addWorker(worker);
   }
+
+  getWorker(id) {
+    return this.apiService.getWorker(id);
+  }
+
+  deleteWorker(id) {
+    return this.apiService.deleteWorker(id);
+  }
 }

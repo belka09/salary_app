@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-worker',
@@ -12,10 +13,6 @@ export class WorkerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  goToWorker(worker) {
-    console.log(worker);
   }
 
 }
